@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://cv12e2u31wbnl"]
+
+[ext_resource type="Script" path="res://scripts/objeto.gd" id="1_3orql"]
+[ext_resource type="Texture2D" uid="uid://fd5l526htyal" path="res://icon.svg" id="1_agwen"]
+[ext_resource type="Shader" path="res://resources/objeto.gdshader" id="2_0ehsa"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yw3id"]
+shader = ExtResource("2_0ehsa")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fdqkw"]
+size = Vector2(112, 112)
+
+[node name="Objeto" type="StaticBody2D"]
+script = ExtResource("1_3orql")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_yw3id")
+texture = ExtResource("1_agwen")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fdqkw")
