@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://d3y7dkirugklh"]
+
+[ext_resource type="Texture2D" uid="uid://fd5l526htyal" path="res://icon.svg" id="1_0oqgg"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_65bcj"]
+[ext_resource type="Script" path="res://scripts/axis.gd" id="2_6j4uu"]
+[ext_resource type="Shader" path="res://resources/player.gdshader" id="3_n37i0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ydstu"]
+size = Vector2(128, 128)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kbycb"]
+shader = ExtResource("3_n37i0")
+
+[node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_65bcj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ydstu")
+
+[node name="Axis" type="Node2D" parent="."]
+script = ExtResource("2_6j4uu")
+
+[node name="RayCast2D" type="RayCast2D" parent="Axis"]
+target_position = Vector2(0, -91)
+
+[node name="Sprite2D" type="Sprite2D" parent="Axis"]
+material = SubResource("ShaderMaterial_kbycb")
+texture = ExtResource("1_0oqgg")
+
+[node name="Camera2D" type="Camera2D" parent="."]
