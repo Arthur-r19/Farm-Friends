@@ -4,6 +4,11 @@ class_name PushableBox
 @export var tilemap : TileMapLayer
 @export var PUSH_SPEED: float = 0.1
 
+@onready var ray_right: RayCast2D = $ray_right
+@onready var ray_bottom: RayCast2D = $ray_bottom
+@onready var ray_left: RayCast2D = $ray_left
+@onready var ray_top: RayCast2D = $ray_top
+
 var tilemap_position: Vector2
 var tween
 func _ready() -> void:
@@ -19,7 +24,7 @@ func push_recursive(n: int, direction: Vector2) -> void:
 		return
 	
 	var next_tilemap_position = tilemap_position+direction
-	if tilemap.is_wall(next_tilemap_position):
+	if tilemap.is_wall(next_tilemap_position) or is_another_object_in_same_direction(direction):
 		return
 	
 	if tween:
@@ -36,3 +41,17 @@ func tween_finished() -> void:
 	print('finished')
 	tween.kill()
 	pass
+	
+func is_another_object_in_same_direction(direction: Vector2)->bool:
+	if direction.x >0 && ray_right.get_collider() is PushableBox:
+		return true
+	elif direction.x <0 && ray_left.get_collider() is PushableBox:
+		return true
+	elif direction.y >0 && ray_bottom.get_collider() is PushableBox:
+		return true
+	elif direction.y <0 && ray_top.get_collider() is PushableBox:
+		return true
+	return false
+		
+	
+	

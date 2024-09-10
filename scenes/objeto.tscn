@@ -19,3 +19,15 @@ texture = ExtResource("1_agwen")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_fdqkw")
+
+[node name="ray_right" type="RayCast2D" parent="."]
+target_position = Vector2(126, 0)
+
+[node name="ray_bottom" type="RayCast2D" parent="."]
+target_position = Vector2(1, 130)
+
+[node name="ray_left" type="RayCast2D" parent="."]
+target_position = Vector2(-96, 1)
+
+[node name="ray_top" type="RayCast2D" parent="."]
+target_position = Vector2(-1, -91)

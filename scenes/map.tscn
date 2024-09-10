@@ -27,3 +27,11 @@ tilemap = NodePath("../TileMapLayer")
 [node name="Objeto4" parent="." node_paths=PackedStringArray("tilemap") instance=ExtResource("3_h8tlc")]
 position = Vector2(324, 1101)
 tilemap = NodePath("../TileMapLayer")
+
+[node name="Objeto5" parent="." node_paths=PackedStringArray("tilemap") instance=ExtResource("3_h8tlc")]
+position = Vector2(706, 1084)
+tilemap = NodePath("../TileMapLayer")
+
+[node name="Objeto6" parent="." node_paths=PackedStringArray("tilemap") instance=ExtResource("3_h8tlc")]
+position = Vector2(1087, 1086)
+tilemap = NodePath("../TileMapLayer")

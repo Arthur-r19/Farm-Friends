@@ -1,15 +1,13 @@
 [gd_scene load_steps=7 format=3 uid="uid://d3y7dkirugklh"]
 
-[ext_resource type="Texture2D" uid="uid://fd5l526htyal" path="res://icon.svg" id="1_0oqgg"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_65bcj"]
 [ext_resource type="Script" path="res://scripts/axis.gd" id="2_6j4uu"]
-[ext_resource type="Shader" path="res://resources/player.gdshader" id="3_n37i0"]
+[ext_resource type="Texture2D" uid="uid://bmm4k7wdjaubs" path="res://assets/top_view_64_bunny.png" id="3_madp8"]
+[ext_resource type="Texture2D" uid="uid://cw350jsm15eyw" path="res://assets/pompom_left_v2.png" id="4_2uw0j"]
+[ext_resource type="Texture2D" uid="uid://cfefmlagdqmi5" path="res://assets/pompom_right_v2.png" id="5_v23ut"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ydstu"]
 size = Vector2(128, 128)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_kbycb"]
-shader = ExtResource("3_n37i0")
 
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
@@ -25,7 +23,17 @@ script = ExtResource("2_6j4uu")
 target_position = Vector2(0, -91)
 
 [node name="Sprite2D" type="Sprite2D" parent="Axis"]
-material = SubResource("ShaderMaterial_kbycb")
-texture = ExtResource("1_0oqgg")
+scale = Vector2(2.23943, 2.23943)
+texture = ExtResource("3_madp8")
+
+[node name="PompomLeftV2" type="Sprite2D" parent="Axis"]
+position = Vector2(-70, -51)
+scale = Vector2(3, 3)
+texture = ExtResource("4_2uw0j")
+
+[node name="PompomRightV2" type="Sprite2D" parent="Axis"]
+position = Vector2(69, -53)
+scale = Vector2(3, 3)
+texture = ExtResource("5_v23ut")
 
 [node name="Camera2D" type="Camera2D" parent="."]
