@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://screens/button.gd" id="1_46lds"]
 [ext_resource type="Shader" path="res://shaders/main_bage_bg_shader.gdshader" id="2_o3oei"]
-[ext_resource type="Texture2D" uid="uid://cg7cplynnu31g" path="res://assets/my assets/heart_tree.png" id="2_ytwnr"]
+[ext_resource type="Texture2D" uid="uid://ctv37m0dre25e" path="res://assets/my assets/tree_small.png" id="2_va8uj"]
 [ext_resource type="Texture2D" uid="uid://x5gea54bjxll" path="res://assets/my assets/placa.png" id="3_traxr"]
 [ext_resource type="Texture2D" uid="uid://cy5fyq11dwg0t" path="res://assets/my assets/play.png" id="4_6j1na"]
 [ext_resource type="Texture2D" uid="uid://celsy67x1l5xq" path="res://assets/my assets/ully_e_amigos_fix.png" id="4_r8qnm"]
@@ -21,25 +21,25 @@ grow_vertical = 2
 [node name="TextureRect" type="TextureRect" parent="."]
 material = SubResource("ShaderMaterial_joai6")
 layout_mode = 0
-offset_left = -4.0
+offset_left = -1.0
 offset_top = -13.0
-offset_right = 638.0
-offset_bottom = 358.0
+offset_right = 160.0
+offset_bottom = 82.0
 scale = Vector2(4, 4)
-texture = ExtResource("2_ytwnr")
+texture = ExtResource("2_va8uj")
 stretch_mode = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1126.3, 443.48)
-scale = Vector2(9.30153, 16.36)
+position = Vector2(319, 106)
+scale = Vector2(2.91576, 4.45833)
 texture = ExtResource("3_traxr")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 973.0
-offset_top = 719.0
-offset_right = 1056.0
-offset_bottom = 802.0
+offset_left = 240.0
+offset_top = 158.0
+offset_right = 280.0
+offset_bottom = 198.0
 scale = Vector2(4, 4)
 icon = ExtResource("4_6j1na")
 flat = true
@@ -47,8 +47,8 @@ expand_icon = true
 script = ExtResource("1_46lds")
 
 [node name="UllyEAmigosFix" type="Sprite2D" parent="."]
-position = Vector2(1092.3, 476.48)
-scale = Vector2(4, 4)
+position = Vector2(321, 116)
+scale = Vector2(0.995375, 0.995375)
 texture = ExtResource("4_r8qnm")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

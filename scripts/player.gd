@@ -9,7 +9,7 @@ enum STATE {
 @onready var ray_cast_2d: RayCast2D = $Axis/RayCast2D
 
 
-const SPEED = 900.0
+const SPEED = 150.0
 var current_state = STATE.IDLE
 var input_direction = Vector2.DOWN
 
@@ -23,7 +23,7 @@ func _process(_delta: float) -> void:
 		var obj = ray_cast_2d.get_collider()
 		if obj and obj is PushableBox:
 			var push_direction := get_push_direction(obj.position) 
-			obj.push_recursive(99, push_direction)
+			obj.push_recursive(3, push_direction)
 			
 	match current_state:
 		STATE.IDLE:

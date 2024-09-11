@@ -4,6 +4,7 @@ class_name PushableBox
 @export var tilemap : TileMapLayer
 @export var PUSH_SPEED: float = 0.1
 
+
 @onready var ray_right: RayCast2D = $ray_right
 @onready var ray_bottom: RayCast2D = $ray_bottom
 @onready var ray_left: RayCast2D = $ray_left
@@ -14,12 +15,16 @@ var tween
 func _ready() -> void:
 	tilemap_position = tilemap.local_to_map(position)
 	position = tilemap.map_to_local(tilemap_position)
+	print('position:', position)
+	print('tilemap_position:',tilemap_position)
 	pass
 	
 func push(quantity: int, direction: Vector2) -> void:
 	push_recursive(quantity, direction)
 
 func push_recursive(n: int, direction: Vector2) -> void:
+	print('position:', position)
+	print('tilemap_position:',tilemap_position)
 	if n == 0:
 		return
 	
@@ -38,7 +43,6 @@ func push_recursive(n: int, direction: Vector2) -> void:
 	push_recursive(n-1, direction)
 	
 func tween_finished() -> void:
-	print('finished')
 	tween.kill()
 	pass
 	

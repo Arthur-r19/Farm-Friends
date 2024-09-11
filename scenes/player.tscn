@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cfefmlagdqmi5" path="res://assets/pompom_right_v2.png" id="5_v23ut"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ydstu"]
-size = Vector2(128, 128)
+size = Vector2(54, 54)
 
 [node name="Player" type="CharacterBody2D"]
 motion_mode = 1
@@ -23,17 +23,14 @@ script = ExtResource("2_6j4uu")
 target_position = Vector2(0, -91)
 
 [node name="Sprite2D" type="Sprite2D" parent="Axis"]
-scale = Vector2(2.23943, 2.23943)
 texture = ExtResource("3_madp8")
 
 [node name="PompomLeftV2" type="Sprite2D" parent="Axis"]
-position = Vector2(-70, -51)
-scale = Vector2(3, 3)
+position = Vector2(-28, -23)
 texture = ExtResource("4_2uw0j")
 
 [node name="PompomRightV2" type="Sprite2D" parent="Axis"]
-position = Vector2(69, -53)
-scale = Vector2(3, 3)
+position = Vector2(30, -22)
 texture = ExtResource("5_v23ut")
 
 [node name="Camera2D" type="Camera2D" parent="."]

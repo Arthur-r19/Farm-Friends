@@ -1,17 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://cv12e2u31wbnl"]
+[gd_scene load_steps=4 format=3 uid="uid://cretfdnysmb0o"]
 
-[ext_resource type="Script" path="res://scripts/objeto.gd" id="1_3orql"]
-[ext_resource type="Texture2D" uid="uid://swhuley63nf3" path="res://assets/my assets/SUM.png" id="3_ohxoc"]
+[ext_resource type="Script" path="res://scripts/operator_block.gd" id="1_itp4s"]
+[ext_resource type="Texture2D" uid="uid://swhuley63nf3" path="res://assets/my assets/SUM.png" id="2_uu5dh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fdqkw"]
 size = Vector2(112, 112)
 
-[node name="Objeto" type="StaticBody2D"]
+[node name="operator_block" type="StaticBody2D"]
 scale = Vector2(0.5, 0.5)
-script = ExtResource("1_3orql")
+script = ExtResource("1_itp4s")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("3_ohxoc")
+texture = ExtResource("2_uu5dh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_fdqkw")

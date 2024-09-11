@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://h1m7xe7yksjw"]
+
+[ext_resource type="Texture2D" uid="uid://dor5thf0ecu70" path="res://assets/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="1_keluu"]
+
+[resource]
+atlas = ExtResource("1_keluu")
+region = Rect2(0, 0, 176, 114)
