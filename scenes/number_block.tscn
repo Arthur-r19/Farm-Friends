@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://21peacrx546e"]
+
+[ext_resource type="Script" path="res://scripts/number_block.gd" id="1_8j3gn"]
+[ext_resource type="Texture2D" uid="uid://drhmc7xs67c35" path="res://assets/numbers/Number_0.png" id="2_42y7i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fdqkw"]
+size = Vector2(112, 112)
+
+[node name="NumberBlock" type="StaticBody2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_8j3gn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_42y7i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fdqkw")

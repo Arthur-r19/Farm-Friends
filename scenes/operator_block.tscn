@@ -1,12 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://cretfdnysmb0o"]
+[gd_scene load_steps=4 format=3 uid="uid://snwov7sx8klj"]
 
 [ext_resource type="Script" path="res://scripts/operator_block.gd" id="1_itp4s"]
-[ext_resource type="Texture2D" uid="uid://swhuley63nf3" path="res://assets/my assets/SUM.png" id="2_uu5dh"]
+[ext_resource type="Texture2D" uid="uid://swhuley63nf3" path="res://assets/operators/SUM.png" id="2_uu5dh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fdqkw"]
 size = Vector2(112, 112)
 
-[node name="operator_block" type="StaticBody2D"]
+[node name="OperatorBlock" type="StaticBody2D"]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_itp4s")
 
@@ -15,15 +15,3 @@ texture = ExtResource("2_uu5dh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_fdqkw")
-
-[node name="ray_right" type="RayCast2D" parent="."]
-target_position = Vector2(126, 0)
-
-[node name="ray_bottom" type="RayCast2D" parent="."]
-target_position = Vector2(1, 130)
-
-[node name="ray_left" type="RayCast2D" parent="."]
-target_position = Vector2(-96, 1)
-
-[node name="ray_top" type="RayCast2D" parent="."]
-target_position = Vector2(-1, -91)

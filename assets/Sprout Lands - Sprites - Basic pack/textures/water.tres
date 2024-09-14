@@ -1,7 +1,0 @@
-[gd_resource type="AnimatedTexture" load_steps=2 format=3 uid="uid://cb1un70d1g0hu"]
-
-[ext_resource type="Texture2D" uid="uid://bpipkxr125ogk" path="res://assets/Sprout Lands - Sprites - Basic pack/Tilesets/Water.png" id="1_dm6gb"]
-
-[resource]
-speed_scale = 4.0
-frame_0/texture = ExtResource("1_dm6gb")

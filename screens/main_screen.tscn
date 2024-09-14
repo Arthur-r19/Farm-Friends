@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://screens/button.gd" id="1_46lds"]
 [ext_resource type="Shader" path="res://shaders/main_bage_bg_shader.gdshader" id="2_o3oei"]
-[ext_resource type="Texture2D" uid="uid://ctv37m0dre25e" path="res://assets/my assets/tree_small.png" id="2_va8uj"]
-[ext_resource type="Texture2D" uid="uid://x5gea54bjxll" path="res://assets/my assets/placa.png" id="3_traxr"]
-[ext_resource type="Texture2D" uid="uid://cy5fyq11dwg0t" path="res://assets/my assets/play.png" id="4_6j1na"]
-[ext_resource type="Texture2D" uid="uid://celsy67x1l5xq" path="res://assets/my assets/ully_e_amigos_fix.png" id="4_r8qnm"]
+[ext_resource type="Texture2D" uid="uid://ctv37m0dre25e" path="res://assets/miscellaneus/tree_small.png" id="2_va8uj"]
+[ext_resource type="Texture2D" uid="uid://x5gea54bjxll" path="res://assets/miscellaneus/placa.png" id="3_traxr"]
+[ext_resource type="Texture2D" uid="uid://cy5fyq11dwg0t" path="res://assets/miscellaneus/play.png" id="4_6j1na"]
+[ext_resource type="Texture2D" uid="uid://celsy67x1l5xq" path="res://assets/miscellaneus/ully_e_amigos_fix.png" id="4_r8qnm"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_joai6"]
 shader = ExtResource("2_o3oei")
@@ -50,5 +50,9 @@ script = ExtResource("1_46lds")
 position = Vector2(321, 116)
 scale = Vector2(0.995375, 0.995375)
 texture = ExtResource("4_r8qnm")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(320, 180)
+zoom = Vector2(2, 2)
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
