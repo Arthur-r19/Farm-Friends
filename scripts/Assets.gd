@@ -2,7 +2,7 @@ extends Node
 
 # OPERATOR ASSETS
 const DIVISION_TEXTURE = preload("res://assets/operators/DIVISION.png")
-const EQUAL_TEXTURE = preload("res://assets/operators/EQUAL.png")
+const EQUALS_TEXTURE = preload("res://assets/operators/EQUAL.png")
 const MULTIPLICATION_TEXTURE = preload("res://assets/operators/MULTIPLICATION.png")
 const PERCENT_TEXTURE = preload("res://assets/operators/PERCENT.png")
 const SUBTRACTION_TEXTURE = preload("res://assets/operators/SUBTRACTION.png")

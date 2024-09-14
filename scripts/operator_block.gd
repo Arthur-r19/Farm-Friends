@@ -1,7 +1,7 @@
 extends PushableBox
 class_name OperatorBlock
 
-enum OPERATORS{SUM, SUBTRACTION, MULTIPLICATION, DIVISION}
+enum OPERATORS{SUM, SUBTRACTION, MULTIPLICATION, DIVISION, EQUALS}
 @export var operator: OPERATORS
 @onready var sprite: Sprite2D = $Sprite2D
 
@@ -21,3 +21,5 @@ func set_operator_texture():
 			sprite.set_texture(Assets.MULTIPLICATION_TEXTURE)
 		OPERATORS.DIVISION:
 			sprite.set_texture(Assets.DIVISION_TEXTURE)
+		OPERATORS.EQUALS:
+			sprite.set_texture(Assets.EQUALS_TEXTURE)
