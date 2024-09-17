@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyrr4dqeqdhww"]
+
+[ext_resource type="AudioStream" uid="uid://dkq8hmadgh1jk" path="res://music/00 lolurio - Everyday Life .wav" id="1_fjrki"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_fjrki")
+autoplay = true

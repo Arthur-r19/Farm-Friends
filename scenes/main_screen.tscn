@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://bqd46615p1nur"]
+
+[ext_resource type="Script" path="res://scripts/button.gd" id="1_46lds"]
+[ext_resource type="Texture2D" uid="uid://bxqigflhhi5bw" path="res://assets/miscellaneus/heart_tree.png" id="2_63n3s"]
+[ext_resource type="Shader" path="res://resources/shaders/main_bage_bg_shader.gdshader" id="2_o3oei"]
+[ext_resource type="Texture2D" uid="uid://c5vcx1dtm80ua" path="res://assets/miscellaneus/placa.png" id="3_traxr"]
+[ext_resource type="Texture2D" uid="uid://53sxwkbwn81n" path="res://assets/miscellaneus/play.png" id="4_6j1na"]
+[ext_resource type="Texture2D" uid="uid://bgtsc6pcsxf2s" path="res://assets/miscellaneus/ully_e_amigos_fix.png" id="4_r8qnm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_joai6"]
+shader = ExtResource("2_o3oei")
+
+[node name="MainScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_joai6")
+layout_mode = 0
+offset_left = -1.0
+offset_top = -13.0
+offset_right = 160.0
+offset_bottom = 82.0
+scale = Vector2(4, 4)
+texture = ExtResource("2_63n3s")
+stretch_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(319, 106)
+scale = Vector2(2.91576, 4.45833)
+texture = ExtResource("3_traxr")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 158.0
+offset_right = 280.0
+offset_bottom = 198.0
+scale = Vector2(4, 4)
+icon = ExtResource("4_6j1na")
+flat = true
+expand_icon = true
+script = ExtResource("1_46lds")
+
+[node name="UllyEAmigosFix" type="Sprite2D" parent="."]
+position = Vector2(321, 116)
+scale = Vector2(0.995375, 0.995375)
+texture = ExtResource("4_r8qnm")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(320, 180)
+zoom = Vector2(2, 2)
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
