@@ -8,6 +8,14 @@ const PERCENT_TEXTURE = preload("res://assets/operators/PERCENT.png")
 const SUBTRACTION_TEXTURE = preload("res://assets/operators/SUBTRACTION.png")
 const SUM_TEXTURE = preload("res://assets/operators/SUM.png")
 
+# OPERATOR GROUND ASSETS
+const DIVISION_GROUND_TEXTURE = preload("res://assets/operators/DIVISION-ground.png")
+const EQUALS_GROUND_TEXTURE = preload("res://assets/operators/EQUAL-ground.png")
+const MULTIPLICATION_GROUND_TEXTURE = preload("res://assets/operators/MULTIPLICATION-ground.png")
+const NULL_GROUND_TEXTURE = preload("res://assets/operators/NULL-ground.png")
+const SUBTRACTION_GROUND_TEXTURE = preload("res://assets/operators/SUBTRACTION-ground.png")
+const SUM_GROUND_TEXTURE = preload("res://assets/operators/SUM-ground.png")
+
 # NUMBER ASSETS
 const ZERO_TEXTURE = preload("res://assets/numbers/Number_0.png")
 const ONE_TEXTURE = preload("res://assets/numbers/Number_1.png")

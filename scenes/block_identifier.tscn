@@ -1,13 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://bgro1fk36i8if"]
 
-[ext_resource type="Texture2D" uid="uid://fd5l526htyal" path="res://icon.svg" id="1_jfc0d"]
 [ext_resource type="Script" path="res://scripts/block_identifier.gd" id="1_wtfh5"]
+[ext_resource type="Texture2D" uid="uid://cd00t8wpk6igu" path="res://assets/operators/NULL-ground.png" id="2_y6kqp"]
 
 [node name="BlockIdentifier" type="Node2D"]
-modulate = Color(1, 0, 0, 1)
 script = ExtResource("1_wtfh5")
 block_content = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.38, 0.38)
-texture = ExtResource("1_jfc0d")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_y6kqp")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfvac36blvl1d"
-path="res://.godot/imported/pompom_left_v2.png-9a864d7048e3f7e452543c63d7831053.ctex"
+uid="uid://b8jx1s2xn7dsq"
+path="res://.godot/imported/SUM-ground.png-b0b1806afce9c2c802f71163ecb8a43f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/pompom_left_v2.png"
-dest_files=["res://.godot/imported/pompom_left_v2.png-9a864d7048e3f7e452543c63d7831053.ctex"]
+source_file="res://assets/operators/SUM-ground.png"
+dest_files=["res://.godot/imported/SUM-ground.png-b0b1806afce9c2c802f71163ecb8a43f.ctex"]
 
 [params]
 

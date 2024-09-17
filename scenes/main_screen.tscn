@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://bqd46615p1nur"]
 
-[ext_resource type="Script" path="res://screens/button.gd" id="1_46lds"]
-[ext_resource type="Shader" path="res://shaders/main_bage_bg_shader.gdshader" id="2_o3oei"]
-[ext_resource type="Texture2D" uid="uid://ctv37m0dre25e" path="res://assets/miscellaneus/tree_small.png" id="2_va8uj"]
-[ext_resource type="Texture2D" uid="uid://x5gea54bjxll" path="res://assets/miscellaneus/placa.png" id="3_traxr"]
-[ext_resource type="Texture2D" uid="uid://cy5fyq11dwg0t" path="res://assets/miscellaneus/play.png" id="4_6j1na"]
-[ext_resource type="Texture2D" uid="uid://celsy67x1l5xq" path="res://assets/miscellaneus/ully_e_amigos_fix.png" id="4_r8qnm"]
+[ext_resource type="Script" path="res://scripts/button.gd" id="1_46lds"]
+[ext_resource type="Texture2D" uid="uid://bxqigflhhi5bw" path="res://assets/miscellaneus/heart_tree.png" id="2_63n3s"]
+[ext_resource type="Shader" path="res://resources/shaders/main_bage_bg_shader.gdshader" id="2_o3oei"]
+[ext_resource type="Texture2D" uid="uid://c5vcx1dtm80ua" path="res://assets/miscellaneus/placa.png" id="3_traxr"]
+[ext_resource type="Texture2D" uid="uid://53sxwkbwn81n" path="res://assets/miscellaneus/play.png" id="4_6j1na"]
+[ext_resource type="Texture2D" uid="uid://bgtsc6pcsxf2s" path="res://assets/miscellaneus/ully_e_amigos_fix.png" id="4_r8qnm"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_joai6"]
 shader = ExtResource("2_o3oei")
@@ -26,7 +26,7 @@ offset_top = -13.0
 offset_right = 160.0
 offset_bottom = 82.0
 scale = Vector2(4, 4)
-texture = ExtResource("2_va8uj")
+texture = ExtResource("2_63n3s")
 stretch_mode = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

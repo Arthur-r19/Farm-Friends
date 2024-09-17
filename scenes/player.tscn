@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_65bcj"]
 [ext_resource type="Script" path="res://scripts/axis.gd" id="2_6j4uu"]
-[ext_resource type="Texture2D" uid="uid://bmm4k7wdjaubs" path="res://assets/character/top_view_64_bunny.png" id="3_madp8"]
-[ext_resource type="Texture2D" uid="uid://cw350jsm15eyw" path="res://assets/character/pompom_left_v2.png" id="4_2uw0j"]
-[ext_resource type="Texture2D" uid="uid://cfefmlagdqmi5" path="res://assets/character/pompom_right_v2.png" id="5_v23ut"]
+[ext_resource type="Texture2D" uid="uid://ciqofpg8du2pf" path="res://assets/character/top_view_64_bunny.png" id="3_madp8"]
+[ext_resource type="Texture2D" uid="uid://cfvac36blvl1d" path="res://assets/character/pompom_left_v2.png" id="4_2uw0j"]
+[ext_resource type="Texture2D" uid="uid://nluaqojt6q72" path="res://assets/character/pompom_right_v2.png" id="5_v23ut"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ydstu"]
 size = Vector2(54, 54)
@@ -18,9 +18,6 @@ shape = SubResource("RectangleShape2D_ydstu")
 
 [node name="Axis" type="Node2D" parent="."]
 script = ExtResource("2_6j4uu")
-
-[node name="RayCast2D" type="RayCast2D" parent="Axis"]
-target_position = Vector2(0, -91)
 
 [node name="Body" type="Sprite2D" parent="Axis"]
 texture = ExtResource("3_madp8")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://snwov7sx8klj"]
 
 [ext_resource type="Script" path="res://scripts/operator_block.gd" id="1_itp4s"]
-[ext_resource type="Texture2D" uid="uid://swhuley63nf3" path="res://assets/operators/SUM.png" id="2_uu5dh"]
+[ext_resource type="Texture2D" uid="uid://d30evklcr4xpc" path="res://assets/operators/PERCENT.png" id="2_aq2cr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fdqkw"]
 size = Vector2(112, 112)
@@ -11,7 +11,8 @@ scale = Vector2(0.5, 0.5)
 script = ExtResource("1_itp4s")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_uu5dh")
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_aq2cr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_fdqkw")

@@ -48,17 +48,17 @@ func _ready() -> void:
 	
 func check(block: PushableBox):
 	if block is OperatorBlock and block_type == BLOCK_TYPES.OPERATOR and block.operator == block_content:
-		print('é um operador')
 		set_active(true)
 	elif block is NumberBlock and block_type == BLOCK_TYPES.NUMBER and block.number == block_content:
 		set_active(true)
-		print('é um numero')
 	else:
 		set_active(false)
 
 func set_active(value: bool):
 	if value == true:
-		self.modulate = Color(0, 1, 0, 1)
+		#self.modulate = Color(0, 1, 0, 1)
+		pass
 	else:
-		self.modulate = Color(1, 0, 0, 1)
+		#self.modulate = Color(1, 0, 0, 1)
+		pass
 	active = value
