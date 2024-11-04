@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bblsysuuahmfp"]
+[gd_scene load_steps=4 format=3 uid="uid://cfoobjc0x8gq7"]
 
 [ext_resource type="Script" path="res://scripts/hud.gd" id="1_8ypmq"]
+[ext_resource type="Texture2D" uid="uid://bn5pxtijp3dn1" path="res://assets/lives/bunny_head_life.png" id="2_aabe5"]
+[ext_resource type="Script" path="res://scripts/level_timer_label.gd" id="3_ees0c"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_8ypmq")
@@ -16,4 +18,44 @@ alignment = 2
 layout_mode = 2
 text = "Resetar"
 
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+offset_left = 57.0
+offset_top = 20.0
+offset_right = 249.0
+offset_bottom = 84.0
+scale = Vector2(0.7, 0.7)
+
+[node name="Lives" type="TextureRect" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_aabe5")
+stretch_mode = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+offset_left = 1069.0
+offset_top = 14.0
+offset_right = 1265.0
+offset_bottom = 54.0
+
+[node name="Label" type="Label" parent="HBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "2:30"
+horizontal_alignment = 1
+script = ExtResource("3_ees0c")
+
+[node name="Timer" type="Timer" parent="HBoxContainer3/Label"]
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="."]
+offset_left = 47.0
+offset_top = 631.0
+offset_right = 107.0
+offset_bottom = 671.0
+
+[node name="Score" type="Label" parent="HBoxContainer4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "SCORE:"
+
 [connection signal="pressed" from="HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="HBoxContainer3/Label/Timer" to="HBoxContainer3/Label" method="_on_timer_timeout"]

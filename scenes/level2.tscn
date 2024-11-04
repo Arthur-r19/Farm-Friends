@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://dem1s5hrnweys"]
+[gd_scene load_steps=11 format=4 uid="uid://hif5c5ed3ni6"]
 
 [ext_resource type="TileSet" uid="uid://co1hk66upxdsr" path="res://resources/tilesets/tileset.tres" id="1_3b7fk"]
 [ext_resource type="PackedScene" uid="uid://ccgpklq8n7ran" path="res://scenes/tile_map_layer.tscn" id="2_gvhq4"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bgro1fk36i8if" path="res://scenes/block_identifier.tscn" id="6_5t17y"]
 [ext_resource type="Texture2D" uid="uid://c6c6v6m0c4mi4" path="res://assets/operators/EQUAL-ground.png" id="6_14sx7"]
 [ext_resource type="PackedScene" uid="uid://d3y7dkirugklh" path="res://scenes/player.tscn" id="7_gr70k"]
-[ext_resource type="PackedScene" uid="uid://bblsysuuahmfp" path="res://scenes/hud.tscn" id="8_mpt8v"]
+[ext_resource type="PackedScene" uid="uid://cfoobjc0x8gq7" path="res://scenes/hud.tscn" id="8_mpt8v"]
 
 [node name="Level2" type="Node2D"]
 

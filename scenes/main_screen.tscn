@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqd46615p1nur"]
+[gd_scene load_steps=8 format=3 uid="uid://dtdxid5bd7ldt"]
 
 [ext_resource type="Script" path="res://scripts/button.gd" id="1_46lds"]
 [ext_resource type="Texture2D" uid="uid://bxqigflhhi5bw" path="res://assets/miscellaneus/heart_tree.png" id="2_63n3s"]

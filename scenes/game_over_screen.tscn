@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://cee6aayvqwrct"]
+
+[ext_resource type="Texture2D" uid="uid://cgptqmd22wcna" path="res://assets/miscellaneus/reload1.png" id="1_nf8w5"]
+[ext_resource type="Script" path="res://scripts/reload_game_button.gd" id="2_1nxwi"]
+[ext_resource type="Texture2D" uid="uid://cdcipe4cgtpa1" path="res://assets/game over/crying_bunny.png" id="3_pg8gp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yd5wq"]
+bg_color = Color(2.31028e-06, 0.704731, 0.535984, 1)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Theme" id="Theme_q1o2d"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/styles/normal = SubResource("StyleBoxFlat_yd5wq")
+
+[node name="GameOverScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 299.0
+offset_right = 1028.0
+offset_bottom = 461.0
+theme_override_font_sizes/normal_font_size = 80
+text = "GAME OVER"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 436.0
+offset_right = 784.0
+offset_bottom = 513.0
+theme = SubResource("Theme_q1o2d")
+theme_override_font_sizes/font_size = 40
+text = "RESTART"
+icon = ExtResource("1_nf8w5")
+script = ExtResource("2_1nxwi")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 522.0
+offset_top = 90.0
+offset_right = 586.0
+offset_bottom = 154.0
+scale = Vector2(3, 3)
+texture = ExtResource("3_pg8gp")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

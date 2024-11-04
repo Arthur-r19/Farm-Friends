@@ -18,9 +18,12 @@ config/icon="res://icon.svg"
 [autoload]
 
 Assets="*res://scripts/Assets.gd"
+GlobalPositions="*res://scripts/GlobalPositions.gd"
 BackgroundMusic="*res://scenes/background_music.tscn"
 LevelManager="*res://scripts/LevelManager.gd"
-GlobalPositions="*res://scripts/GlobalPositions.gd"
+GlobalLivesManager="*res://scripts/GlobalLivesManager.gd"
+GlobalTimer="*res://scripts/Global_timer.gd"
+GlobalScore="*res://scripts/GlobalScore.gd"
 
 [display]
 
