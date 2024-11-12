@@ -1,6 +1,7 @@
-[gd_scene load_steps=30 format=3 uid="uid://dld0sndqo1gxo"]
+[gd_scene load_steps=31 format=3 uid="uid://dld0sndqo1gxo"]
 
 [ext_resource type="Texture2D" uid="uid://c0andohtlql5r" path="res://assets/Bckg.png" id="1_35jso"]
+[ext_resource type="Script" path="res://scripts/parallax_control.gd" id="1_s0fcl"]
 [ext_resource type="Texture2D" uid="uid://cdgc0c03yfywv" path="res://assets/Green_mountain.png" id="2_srlhc"]
 [ext_resource type="Texture2D" uid="uid://chtdcryxc315y" path="res://assets/Clouds.png" id="3_7srj0"]
 [ext_resource type="Texture2D" uid="uid://xnwu1ylrds61" path="res://assets/Green_Field.png" id="4_gsv1i"]
@@ -148,6 +149,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1280.0
 offset_bottom = 720.0
+script = ExtResource("1_s0fcl")
 metadata/_edit_lock_ = true
 
 [node name="TextureRect2" type="TextureRect" parent="Control"]
@@ -155,8 +157,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -224.0
-offset_right = -377.0
+offset_right = 528.0
 offset_bottom = -448.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -165,28 +166,14 @@ texture = ExtResource("1_35jso")
 stretch_mode = 1
 metadata/_edit_lock_ = true
 
-[node name="TextureRect3" type="TextureRect" parent="Control"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -25.0
-offset_right = 480.0
-offset_bottom = 247.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(2, 2)
-texture = ExtResource("3_7srj0")
-stretch_mode = 1
-
 [node name="TextureRect5" type="TextureRect" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -352.0
+offset_left = -140.0
 offset_top = 32.0
-offset_right = -608.0
+offset_right = 628.0
 offset_bottom = -416.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -194,21 +181,33 @@ scale = Vector2(2, 2)
 texture = ExtResource("2_srlhc")
 stretch_mode = 1
 
+[node name="TextureRect3" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 127.0
+offset_right = 640.0
+offset_bottom = -321.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+texture = ExtResource("3_7srj0")
+stretch_mode = 1
+
 [node name="TextureRect4" type="TextureRect" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -42.0
-offset_top = 430.0
-offset_right = -346.0
-offset_bottom = -18.0
+offset_top = 405.0
+offset_right = -304.0
+offset_bottom = -43.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
 texture = ExtResource("4_gsv1i")
 stretch_mode = 1
-metadata/_edit_lock_ = true
 
 [node name="Arvere" type="Sprite2D" parent="Control"]
 position = Vector2(672, 352)
@@ -241,6 +240,7 @@ wait_time = 3.0
 autostart = true
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(962, 578)
 script = ExtResource("8_oh1ix")
 

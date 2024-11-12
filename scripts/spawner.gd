@@ -5,6 +5,7 @@ var apple_scene = preload("res://scenes/apple.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	GlobalScore.game_mode = randi_range(0,1)
 	pass # Replace with function body.
 
 
