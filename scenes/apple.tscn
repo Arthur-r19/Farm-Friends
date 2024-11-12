@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://cggy7ntglef1o"]
+
+[ext_resource type="Texture2D" uid="uid://ci2mg3vug4rha" path="res://assets/apple.png" id="1_kpcgy"]
+[ext_resource type="Script" path="res://scripts/apple.gd" id="1_ln7fc"]
+[ext_resource type="FontFile" uid="uid://c17628ptgk7nm" path="res://assets/Stacked pixel.ttf" id="2_hrhqq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dd6r8"]
+radius = 24.0
+
+[node name="Apple" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_ln7fc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("1_kpcgy")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -13.0
+offset_top = -6.0
+offset_right = 15.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0.945098, 0.584314, 0.337255, 1)
+theme_override_colors/font_outline_color = Color(0.780392, 0.380392, 0.160784, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_hrhqq")
+theme_override_font_sizes/font_size = 24
+text = "xx"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_dd6r8")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

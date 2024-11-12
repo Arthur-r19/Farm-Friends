@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cee6aayvqwrct"]
+[gd_scene load_steps=7 format=3 uid="uid://bufqjl5eu6y2w"]
 
 [ext_resource type="Texture2D" uid="uid://cgptqmd22wcna" path="res://assets/miscellaneus/reload1.png" id="1_nf8w5"]
 [ext_resource type="Script" path="res://scripts/reload_game_button.gd" id="2_1nxwi"]
 [ext_resource type="Texture2D" uid="uid://cdcipe4cgtpa1" path="res://assets/game over/crying_bunny.png" id="3_pg8gp"]
+[ext_resource type="Script" path="res://scripts/final_score_label.gd" id="4_m06lq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yd5wq"]
 bg_color = Color(2.31028e-06, 0.704731, 0.535984, 1)
@@ -32,9 +33,9 @@ text = "GAME OVER"
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 464.0
-offset_top = 436.0
+offset_top = 515.0
 offset_right = 784.0
-offset_bottom = 513.0
+offset_bottom = 592.0
 theme = SubResource("Theme_q1o2d")
 theme_override_font_sizes/font_size = 40
 text = "RESTART"
@@ -49,5 +50,16 @@ offset_right = 586.0
 offset_bottom = 154.0
 scale = Vector2(3, 3)
 texture = ExtResource("3_pg8gp")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 328.0
+offset_top = 364.0
+offset_right = 964.0
+offset_bottom = 526.0
+theme_override_font_sizes/font_size = 80
+text = "SCORE: "
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("4_m06lq")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

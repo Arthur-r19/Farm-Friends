@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://bwhgi85i1lip"]
+
+[ext_resource type="Script" path="res://scripts/final_score_label.gd" id="1_1vj4q"]
+[ext_resource type="Texture2D" uid="uid://cgptqmd22wcna" path="res://assets/miscellaneus/reload1.png" id="1_fpdq8"]
+[ext_resource type="Script" path="res://scripts/reload_game_button.gd" id="2_o83j8"]
+[ext_resource type="Texture2D" uid="uid://bcoxue8swsi3r" path="res://assets/Clock.png" id="4_vaflk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yd5wq"]
+bg_color = Color(2.31028e-06, 0.704731, 0.535984, 1)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Theme" id="Theme_q1o2d"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/styles/normal = SubResource("StyleBoxFlat_yd5wq")
+
+[node name="TimeOverScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 327.0
+offset_top = 257.0
+offset_right = 963.0
+offset_bottom = 419.0
+theme_override_font_sizes/font_size = 80
+text = "TIME  OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 364.0
+offset_right = 964.0
+offset_bottom = 526.0
+theme_override_font_sizes/font_size = 80
+text = "SCORE: "
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_1vj4q")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 477.0
+offset_top = 546.0
+offset_right = 797.0
+offset_bottom = 623.0
+theme = SubResource("Theme_q1o2d")
+theme_override_font_sizes/font_size = 40
+text = "RESTART"
+icon = ExtResource("1_fpdq8")
+script = ExtResource("2_o83j8")
+
+[node name="Clock" type="Sprite2D" parent="."]
+position = Vector2(640, 197)
+scale = Vector2(0.229004, 0.229004)
+texture = ExtResource("4_vaflk")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

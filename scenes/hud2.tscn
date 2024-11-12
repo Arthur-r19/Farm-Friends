@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbwu4xhnof6gq"]
+
+[ext_resource type="Script" path="res://scripts/hud2.gd" id="1_4f7q5"]
+[ext_resource type="Texture2D" uid="uid://bn5pxtijp3dn1" path="res://assets/lives/bunny_head_life.png" id="2_3uyhf"]
+[ext_resource type="Texture2D" uid="uid://bcoxue8swsi3r" path="res://assets/Clock.png" id="3_7of40"]
+[ext_resource type="Script" path="res://scripts/level_bonus_timer_label.gd" id="4_5s8ye"]
+
+[node name="HUD2" type="CanvasLayer"]
+script = ExtResource("1_4f7q5")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+offset_left = 57.0
+offset_top = 20.0
+offset_right = 249.0
+offset_bottom = 84.0
+scale = Vector2(0.7, 0.7)
+
+[node name="Lives" type="TextureRect" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_3uyhf")
+stretch_mode = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+offset_left = 1069.0
+offset_top = 24.0
+offset_right = 1265.0
+offset_bottom = 64.0
+
+[node name="Clock" type="Sprite2D" parent="HBoxContainer3"]
+position = Vector2(92, 13)
+scale = Vector2(0.0791016, 0.0791016)
+texture = ExtResource("3_7of40")
+
+[node name="Label" type="Label" parent="HBoxContainer3"]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 25
+text = "90 s"
+horizontal_alignment = 1
+script = ExtResource("4_5s8ye")
+
+[node name="Timer" type="Timer" parent="HBoxContainer3/Label"]
+wait_time = 60.0
+autostart = true
+
+[node name="Score" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 775.0
+offset_top = 28.0
+offset_right = 884.0
+offset_bottom = 67.0
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 26
+text = "SCORE:"
+
+[node name="Mode" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 242.0
+offset_top = 23.0
+offset_right = 591.0
+offset_bottom = 62.0
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 26
+text = "COLETE APENAS AS MAÇÃS: "
+
+[connection signal="timeout" from="HBoxContainer3/Label/Timer" to="HBoxContainer3/Label" method="_on_timer_timeout"]
